@@ -1,13 +1,13 @@
 import { useRouter } from 'next/router';
 import React from 'react';
 import { getPosts, getPostDetails } from '../../services';
-import Author from '../components/Author';
-import Categories from '../components/Categories';
-import Comments from '../components/Comments';
-import CommentsForm from '../components/CommentsForm';
-import Loader from '../components/Loader';
-import PostDetail from '../components/PostDetail';
-import PostWidget from '../components/PostWidget';
+import Author from '../../components/Author';
+import Categories from '../../components/Categories';
+import Comments from '../../components/Comments';
+import CommentsForm from '../../components/CommentsForm';
+import Loader from '../../components/Loader';
+import PostDetail from '../../components/PostDetail';
+import PostWidget from '../../components/PostWidget';
 
 const PostDetails = ({ post }) => {
   const router = useRouter();

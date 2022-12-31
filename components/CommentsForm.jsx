@@ -1,9 +1,8 @@
 import React, { useRef, useEffect, useState } from "react";
-import { submitComment } from "../../services";
+import { submitComment } from "../services";
 
 const CommentsForm = ({slug}) => {
   const [error, setError] = useState(false);
-  const [localStorage, setLocalStorage] = useState(null);
   const [showSuccessMessage, setShowSuccessMessage] = useState(false);
   const commentEl = useRef();
   const nameEl = useRef();
@@ -91,7 +90,7 @@ const CommentsForm = ({slug}) => {
         <button
           type="button"
           onClick={handleCommentSubmission}
-          className="transition duration-500 ease hover:bg-indigo-900 text-white inline-block bg-pink-600 text-lg rounded-full py-3 px-8 cursor-pointer"
+          className="transition duration-500 ease hover:bg-indigo-900 text-white inline-block bg-indigo-700 text-lg rounded-full py-3 px-8 cursor-pointer"
         >
           Post Comment
         </button>

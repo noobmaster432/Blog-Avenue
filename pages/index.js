@@ -1,12 +1,9 @@
 import Head from 'next/head';
-import PostCard from './components/PostCard';
-import PostWidget from './components/PostWidget';
-import Categories from './components/Categories';
+import PostCard from '../components/PostCard';
+import PostWidget from '../components/PostWidget';
+import Categories from '../components/Categories';
 import FeaturedPosts from '../sections/FeaturedPosts';
-import { Inter } from '@next/font/google';
 import { getPosts } from '../services';
-
-const inter = Inter({ subsets: ['latin'] })
 
 export default function Home({ posts }) {
   return (
