@@ -7,7 +7,7 @@ const PostCard = ({ post }) => {
     <div className="bg-white shadow-lg rounded-lg p-0 lg:p-8 pb-12 mb-8">
       <div className="relative overflow-hidden shadow-md pb-80 mb-6">
         <img
-          src={post.featuredImage.url}
+          src={post && post.featuredImage.url ? post.featuredImage.url : "https://picsum.photos/200/300"}
           alt={post.title}
           className="object-top absolute h-80 w-full object-cover shadow-lg rounded-t-lg lg:rounded-lg"
         />
@@ -19,7 +19,7 @@ const PostCard = ({ post }) => {
       </h1>
       <div className="block lg:flex text-center items-center justify-center mb-8 w-full">
         <div className="flex items-center justify-center mb-4 lg:mb-0 w-full lg:w-auto mr-8">
-          <img src={post.author.photo.url} alt={post.author.name} height='40px' width='40px' className="align-middle rounded-full" />
+          <img src={post && post.author.photo.url ? post.author.photo.url : "https://picsum.photos/200/300"} alt={post.author.name} height='40px' width='40px' className="align-middle rounded-full" />
           <p className="inline align-middle text-gray-700 ml-2 text-lg">{post.author.name}</p>
         </div>
         <div className="font-medium text-gray-700">
