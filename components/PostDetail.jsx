@@ -30,7 +30,7 @@ const PostDetail = ({post}) => {
                 h3: ({ children }) => <h3 className="text-xl font-semibold mb-4 mt-8">{children}</h3>,
                 p: ({ children }) => <p className="mb-4 mt-4">{children}</p>,
                 bold: ({ children }) => <strong>{children}</strong>,
-                ul: ({ children }) => <li className="font-serif text-lg text-blue-900 list-none ml-4">{children}</li>,
+                ul: ({ children }) => <li className="font-sans text-lg text-blue-900 list-none ml-4">{children}</li>,
               }}
               />
         </div>
