@@ -4,6 +4,7 @@ import { getCategories, getCategoryPost } from '../../services';
 import Loader from '../../components/Loader';
 import PostCard from '../../components/PostCard';
 import Categories from '../../components/Categories';
+import Head from 'next/head';
 
 const CategoryPost = ({ posts }) => {
   const router = useRouter();
@@ -14,6 +15,9 @@ const CategoryPost = ({ posts }) => {
 
   return (
     <div className="container mx-auto px-10 mb-8">
+      <Head>
+        <title>Blog Avenue</title>
+      </Head>
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
         <div className="col-span-1 lg:col-span-8">
           {posts.map((post, index) => (
@@ -23,7 +27,10 @@ const CategoryPost = ({ posts }) => {
         <div className="col-span-1 lg:col-span-4">
           <div className="relative lg:sticky top-8">
             <Categories />
-            <img src="https://github.githubassets.com/images/modules/site/home-campaign/astrocat.png" alt="side photo" />
+            <img
+              src="https://github.githubassets.com/images/modules/site/home-campaign/astrocat.png"
+              alt="side photo"
+            />
           </div>
         </div>
       </div>
@@ -37,7 +44,7 @@ export async function getStaticProps({ params }) {
   const posts = await getCategoryPost(params.slug);
 
   return {
-    props: { posts },
+    props: { posts }
   };
 }
 
