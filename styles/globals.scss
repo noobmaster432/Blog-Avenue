@@ -64,3 +64,18 @@ a {
   box-sizing: border-box;
 }
 
+::-webkit-scrollbar {
+  width: 0.625rem;
+  background: transparent;
+  scrollbar-width: thin;
+  scrollbar-color: #13358d;
+}
+
+::-webkit-scrollbar-track {
+  background: #3268f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(144deg, #053dca 30%, #011a58);
+  border-radius: 0.625rem;
+}
